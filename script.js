@@ -19,9 +19,18 @@ const d_text = document.getElementById("d_text");
 const submitBtn = document.getElementById("submit");
 const start_btn = document.querySelector(".btn .start")
 const btn = document.querySelector(".buttons")
-
+const myName = document.querySelector(".name")
+const myBtn = document.querySelector(".myButton")
+let useName;
 let currentQuiz = 0;
 let score = 0;
+
+
+myBtn.onclick = () => {
+    useName = document.querySelector(".myText").value
+    btn.classList.remove("hide")
+    myName.classList.add("hide")
+}
 
 start_btn.onclick = () => {
     quiz.classList.remove("hide")
@@ -75,7 +84,7 @@ submitBtn.addEventListener("click", () => {
             loadQuiz();
         } else {
             quiz.innerHTML = `
-                <h2>Bạn đã trả lời đúng ${score}/${quizData.length} câu.</h2>
+                <h2>Chúc mừng ${useName} đã trả lời đúng ${score}/${quizData.length} câu.</h2>
                 
                 <button onclick="location.reload()">Chơi Lại</button>
             `;
