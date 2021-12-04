@@ -17,7 +17,7 @@ body {
 }
 
 .hide{
-    display: none;
+    display: none !important;
 }
 
 .buttons h3{
@@ -45,7 +45,7 @@ body {
 
 .buttons a{
     padding: 8px 40px;
-    background-color: rgb(40, 38, 151);
+    background-color:#a14fff;
     color: #fff;
     text-decoration: none;
     border-radius: 10px;
@@ -80,7 +80,48 @@ body {
     padding: 2rem;
 }
 
+.name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(500%);
+    font-size: 25px;
+}
 
+.name label, .name input{
+    margin-right: 25px;
+}
+
+.name label{
+    color: #fff;
+    background:rgb(0, 98, 255);
+    padding: 5px 20px;
+    border-radius: 10px;
+    user-select: none;
+}
+
+.name input{
+    padding: 10px 10px;
+    border-radius: 5px;
+    outline: none;
+    border: #fff;
+    font-size: 20px;
+}
+
+
+.name button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+.name button:hover{
+    transform: scale(1.03);
+    background-color: #a14fff;
+    color: #fff;
+    transition: background-color 0.2s linear;
+}
 h2 {
     padding: 1rem;
     text-align: center;
