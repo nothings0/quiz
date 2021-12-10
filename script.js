@@ -169,7 +169,7 @@ submitBtn.addEventListener("click", () => {
                 quiz.innerHTML = `
                 <h2>Chúc mừng <span>${useName}</span> đã trả lời đúng ${score}/${quizData.length} câu.</h2>
                 
-                <button href="https://nothings0.github.io/demo/">Web môi trường</button>
+                <button><a href="https://nothings0.github.io/demo/" class="web-end">Web môi trường</a></button>
             `;
             }
             
