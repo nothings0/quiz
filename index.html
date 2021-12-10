@@ -1,75 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Quiz APP</title>
-        <link rel="stylesheet" href="style.css"/>
-        <link rel="icon" href="" type="image/svg">
-        <script src="script.js" defer></script>
-    </head>
-    <body>
-        <div class="name">
-            <label>Họ Và Tên :</label>
-            <input type="text" class="myText">
-            <button type="button" class="myButton">Submit</button>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz APP</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" href="" type="image/svg">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="name">
+        <label>Họ Và Tên :</label>
+        <input type="text" class="myText" placeholder="Nhập họ tên bạn...">
+        <button type="button" class="myButton">Submit</button>
+    </div>
+    <div class="buttons hide intro">
+        <h3>Rác Thải Nhựa</h3>
+        <div class="para"></div>
+        <div class="btn">
+            <a href="https://nothings0.github.io/demo/" class="web">Web</a>
+            <button class="start">Start</button>
         </div>
-        <div class="buttons hide intro">
-            <h3>Câu hỏi môi trường</h3>
-            <div class="para"></div>
-            <div class="btn">
-                <a href="https://nothings0.github.io/demo/" class="web">Web</a>
-                <button class="start">Start</button>
+    </div>
+    <div class="quiz-container hide" id="quiz">
+        <div class="quiz-header">
+            <div>
+                <h2 id="question">Question text</h2>
+                <ul>
+                <li>
+                    <input
+                        type="radio"
+                        id="a"
+                        name="answer"
+                        class="answer"
+                    />
+                    <label id="a_text" for="a">Question</label>
+                </li>
+                <li>
+                    <input
+                        type="radio"
+                        id="b"
+                        name="answer"
+                        class="answer"
+                    />
+                    <label id="b_text" for="b">Question</label>
+                </li>
+                <li>
+                    <input
+                        type="radio"
+                        id="c"
+                        name="answer"
+                        class="answer"
+                    />
+                    <label id="c_text" for="c">Question</label>
+                </li>
+                <li>
+                    <input
+                        type="radio"
+                        id="d"
+                        name="answer"
+                        class="answer"
+                    />
+                    <label id="d_text" for="d">Question</label>
+                </li>
+                </ul>
+            </div>
+            <div>
+                <img alt="" class="anh">
             </div>
         </div>
-        <div class="quiz-container hide" id="quiz">
-            <div class="quiz-header">
-                <div>
-                    <h2 id="question">Question text</h2>
-                    <ul>
-                    <li>
-                        <input
-                            type="radio"
-                            id="a"
-                            name="answer"
-                            class="answer"
-                        />
-                        <label id="a_text" for="a">Question</label>
-                    </li>
-                    <li>
-                        <input
-                            type="radio"
-                            id="b"
-                            name="answer"
-                            class="answer"
-                        />
-                        <label id="b_text" for="b">Question</label>
-                    </li>
-                    <li>
-                        <input
-                            type="radio"
-                            id="c"
-                            name="answer"
-                            class="answer"
-                        />
-                        <label id="c_text" for="c">Question</label>
-                    </li>
-                    <li>
-                        <input
-                            type="radio"
-                            id="d"
-                            name="answer"
-                            class="answer"
-                        />
-                        <label id="d_text" for="d">Question</label>
-                    </li>
-                    </ul>
-                </div>
-                <div>
-                    <img alt="" class="anh">
-                </div>
-            </div>
-            <button id="submit">Submit</button>
-        </div>
-    </body>
+        <button id="submit">Submit</button>
+    </div>
+
+</body>
 </html>
