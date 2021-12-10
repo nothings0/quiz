@@ -188,3 +188,9 @@ span{
     outline: none;
 }
 
+.web-end{
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+}
