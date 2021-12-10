@@ -1,40 +1,67 @@
 const quizData = [
     {
-        question: "Việt Nam đứng thứ mấy về số lượng tiêu thụ rác thải nhựa?",
-        a: "1",
-        b: "2",
-        c: "3",
-        d: "4",
+        question: "Thời gian phân huỷ rác thải nhựa là bao nhiêu?",
+        a: "10 – 20 năm",
+        b: "50 – 60 năm",
+        c: "100 – 200 năm",
+        d: "450 – 1000 năm",
         anhnen: "g-3.jpg",
         correct: "d",
     },
     {
-        question: "Việt Nam đứng thứ mấy về số lượng tiêu thụ rác thải nhựa?",
-        a: "1",
-        b: "2",
-        c: "3",
-        d: "4",
+        question: "Rác thải nhựa khi được xử lý sẽ thải ra những loại khí nào?",
+        a: "Oxit cácbon, hydrocacbon, benzen, dioxin",
+        b: "Krypton, hydrogen sulfide, silane",
+        c: "Xenon, stibine, silane",
+        d: "Phosphine, oxygen, nitrogen",
+        anhnen: "g-4.jpg",
+        correct: "a",
+    },
+    {
+        question: "Việt Nam đứng thứ bao nhiêu trong việc xả rác thải nhựa ra môi trường?",
+        a: "4",
+        b: "5",
+        c: "1",
+        d: "2",
+        anhnen: "g-5.jpg",
+        correct: "a",
+    },
+    {
+        question: "Nước nào có lượng rác thải nhựa lớn nhất thế giới?",
+        a: "Mỹ",
+        b: "Trung Quốc",
+        c: "Nga",
+        d: "Ấn Độ",
+        anhnen: "b-5.jpg",
+        correct: "a",
+    },
+    {
+        question: "Biện pháp xử lý rác thải nhựa nào ít gây ô nhiễm môi trường nhất?",
+        a: "Đốt cháy",
+        b: "Chôn lấp",
+        c: "Tái chế",
+        d: "Tất cả ý kiến trên",
+        anhnen: "g-2.jpg",
+        correct: "c",
+    },
+    {
+        question: "Các loại rác thải nhựa có thể tái chế?",
+        a: "Tất cả rác thải nhựa đều có thể tái chế",
+        b: "PETE, HDPE, PP, ABS",
+        c: "PVC, LDPE, PS, nhóm nhựa số 7",
+        d: "Không có loại rác thải nhựa nào có thể tái chế",
+        anhnen: "a-1.jpg",
+        correct: "b",
+    },
+    {
+        question: "Biện pháp nào hạn chế việc xả rác thải nhựa ra môi trường?",
+        a: "Thay đổi thói quen sử dụng ống hút nhựa",
+        b: "Dùng lọ thuỷ tinh có thể tái sử dụng",
+        c: "Mua đồ có bao bì hộp giấy thay vì chai/hộp nhựa",
+        d: "Tất cả các ý trên",
         anhnen: "g-1.jpg",
         correct: "d",
     },
-    {
-        question: "Việt Nam đứng thứ mấy về số lượng tiêu thụ rác thải nhựa?",
-        a: "1",
-        b: "2",
-        c: "3",
-        d: "4",
-        anhnen: "g-2.jpg",
-        correct: "d",
-    },
-    {
-        question: "Việt Nam đứng thứ mấy về số lượng tiêu thụ rác thải nhựa?",
-        a: "1",
-        b: "2",
-        c: "3",
-        d: "4",
-        anhnen: "a.png",
-        correct: "d",
-    }
 ];
 
 const image = document.querySelector(".anh")
@@ -126,11 +153,26 @@ submitBtn.addEventListener("click", () => {
         if (currentQuiz < quizData.length) {
             loadQuiz();
         } else {
-            quiz.innerHTML = `
+            if(score<=3){
+                quiz.innerHTML = `
+                <h2>Bạn chỉ trả lời đúng ${score}/${quizData.length} câu, hãy thử lại nhé.</h2>
+                
+                <button onclick="location.reload()">Thử Lại</button>
+            `;
+            }else if(score<7 && score>3){
+                quiz.innerHTML = `
                 <h2>Chúc mừng <span>${useName}</span> đã trả lời đúng ${score}/${quizData.length} câu.</h2>
                 
                 <button onclick="location.reload()">Thử Lại</button>
             `;
+            }else{
+                quiz.innerHTML = `
+                <h2>Chúc mừng <span>${useName}</span> đã trả lời đúng ${score}/${quizData.length} câu.</h2>
+                
+                <button href="https://nothings0.github.io/demo/">Web môi trường</button>
+            `;
+            }
+            
         }
     }
 });
